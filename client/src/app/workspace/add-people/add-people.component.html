@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>
+                Add people
+            </h3>
+        </div>
+        <span class="material-icons right" (click)="close()">close</span>
+    </div>
+    <br><br>
+
+    <div class="row">
+        <form class="col" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="input-field">
+                <p>Users</p>
+                <div formArrayName="users">
+                    <div class="form-group" *ngFor="let user of form.controls['users']['controls']; let i = index">
+                        <input class="input" formControlName="{{i}}" />
+                    </div>
+                </div>
+            </div>
+            <button class="waves-effect btn" type="button" (click)="addUser()">
+                Add new user
+            </button>
+            <br><br>
+            <button class="waves-effect btn" type="submit" [disabled]="form.invalid">
+               Update workspace
+            </button>
+        </form>
+    </div>
+</div>
+   

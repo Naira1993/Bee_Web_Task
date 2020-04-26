@@ -1,0 +1,39 @@
+.container {
+    background-color: #ffd54e;
+    height: 1000px;
+    margin: 0;
+    padding: 15px 10px
+}
+
+.collection-item, a {
+    background: #000;
+    color:  #ffd54e;
+     font-weight: bold;
+     margin: 10px
+}
+
+b {
+    color: #ffd54e;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn, .btn:hover, .btn:active {
+    
+    background-color: black;
+    color:  #ffd54e
+}
+
+i {
+    margin: 10px;
+    cursor: pointer;
+}
+
+span {
+    background-image: url('/images/images.jpg');
+    width: 50px;
+}
+
+a {
+    cursor: pointer;
+}

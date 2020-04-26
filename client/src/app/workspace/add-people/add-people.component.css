@@ -1,0 +1,30 @@
+.container {
+    margin-top: 100px;
+    border: 1px solid black ;
+    box-shadow: 0 3px 2px #ffd54e;
+    padding: 15px;
+}
+
+h3 {
+    text-align: center;
+}
+
+b {
+    color: #ffd54e;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn, .btn:hover, .btn:active {
+    background-color: #ffd54e;
+    color: black
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+span {
+    cursor: pointer;
+}

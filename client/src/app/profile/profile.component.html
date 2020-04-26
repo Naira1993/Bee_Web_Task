@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card">
+                <div class="card-image">
+                    <img class="responsive-img" [src]="user?.image">
+                </div>
+                <div class="card-content">
+                    <p><i>{{user?.email}}</i></p>
+                    <p><b>{{user?.fullName}}</b></p>
+                    <br>
+                    <hr>
+                    <button data-target="modal1" class="btn modal-trigger center" href="#modal1"
+                        (click)="openModal(modal)">Choose workspace</button>
+                    <br>
+                    <br>
+                    <button class="btn center"><a routerLink="/add-workspace">Add workspace</a></button>
+                    <br>
+                    <br>
+                    <button class="btn" type="button" routerLink="/update/{{user?.email}}">Update profile</button>
+                    <button class="btn right" (click)="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal1" class="modal" #modal>
+    <div class="collection" *ngIf="workspaces">
+        <div class="collection-item" *ngFor="let workspace of workspaces">
+            <a routerLink="/workspace/{{workspace.id}}">{{workspace.displayName}}</a>
+         <div>
+    </div>
+
+    <div class="collection" *ngIf="!workspaces">
+        <div class="collection-item">
+            Don't workspaces
+         <div>
+    </div>
+</div>

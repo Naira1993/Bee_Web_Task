@@ -1,0 +1,28 @@
+
+
+.card {
+    width: 600px;
+}
+
+.btn, .btn:hover, .btn:active {
+    background-color: #ffd54e;
+    color: black
+}
+p {
+    text-align: center;
+}
+
+.collection-item {
+
+    background: black;
+}
+
+.collection-item a {
+    color:  #ffd54e;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

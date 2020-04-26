@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="collection">
+    <div class="collection-item">
+      <h3><b>Smile</b></h3>
+      <p>free chat</p>
+    </div>
+
+    <div class="collection-item">
+      <h5>Workspace name:  {{workspace?.name}}</h5>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="collection-item">
+      <table class="collection">
+        <thead class="collection-item">
+          People
+        </thead>
+        <tr class="collection-item" *ngFor="let user of workspace?.users">
+          {{user}}
+        </tr>
+        <tfoot>
+          Add people <a routerLink="/workspace/{{workspace?.id}}/add/{{workspace?.id}}"><i class="material-icons">add_circle</i></a>
+        </tfoot>
+      </table>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="collection-item">
+        Owner {{workspace?.user_email}}
+    </div>
+
+    <div class="collection-item">
+        <a routerLink="/profile">Log out this workspace</a>
+  </div>
+
+  <div class="collection-item">
+    <a (click)="delete()">Delete</a>
+</div>
+
+
+
+  </div>
+</div>

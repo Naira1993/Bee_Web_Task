@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <h3>
+                Add workspace
+            </h3>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="row">
+        <form class="col s6 offset-s3" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <div class="input-field">
+                <input id="name" type="text" formControlName="name">
+                <label for="name">Name</label>
+            </div>
+
+            <div class="input-field">
+                <input id="displayName" type="text"  formControlName="displayName">
+                <label for="displayName">Display Name</label>
+            </div>
+
+            <div class="input-field">
+                <p>Users</p>
+                <div formArrayName="users">
+                    <div class="form-group" *ngFor="let user of form.controls['users']['controls']; let i = index">
+                        <input class="input" formControlName="{{i}}" />
+                    </div>
+                </div>
+            </div>
+            <button class="waves-effect btn" type="button" (click)="addUser()">
+                Add new user
+            </button>
+
+
+            <br><br>
+
+            <button class="waves-effect btn right" type="submit" [disabled]="form.invalid">
+                Add workspace
+            </button>
+
+
+            <button class="waves-effect btn" type="button" (click)="cancel()">
+                Back to profile
+            </button>
+
+
+        </form>
+    </div>
+</div>

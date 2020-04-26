@@ -1,0 +1,38 @@
+<div class="row messages">
+    <div class="col 12">
+        <ul class="collection">
+            <li class="collection-item" *ngFor="let message of messages | slice:start:end ">
+        <p>
+            {{message?.text}}
+        </p>
+        <b>
+            <i>
+                {{message?.user_name}}
+            </i>
+            <i>{{message?.createdAt | date:'medium' }}</i>
+        </b>
+
+            </li>
+        </ul>
+    </div>
+</div>
+<ul class="pagination center" *ngIf="messages?.length > 5">
+    <li class="waves-effect"><a  (click)="changePage(false)" *ngIf="page"><i
+          class="material-icons">chevron_left</i></a></li>
+    <li class="waves-effect" *ngFor="let item of pageOfMessages" (click)="setPage(item)"
+      [ngClass]="{'active': page === item }"><a>{{item + 1}}</a></li>
+    <li class="waves-effect" (click)="changePage(true)" *ngIf="page!==pageOfMessages[pageOfMessages.length-1]"><a
+><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+
+<div class="row">
+    <form class="col s12" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea" formControlName="message"></textarea>
+                <label for="textarea1">Message</label>
+            </div>
+            <button class="btn" type="submit">Send</button>
+        </div>
+    </form>
+</div>

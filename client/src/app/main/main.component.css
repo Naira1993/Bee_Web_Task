@@ -1,0 +1,25 @@
+.btn, .btn:hover, .btn:active {
+    background-color: #ffd54e;
+    color: black
+}
+
+
+ul.collection  {
+    width: 100%;
+    border: none;
+}
+
+
+
+.collection-item {
+    width: 100%;
+    margin: 10px;
+    background-color: #ffd54e;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.messages {
+    min-height: 700px;
+}
